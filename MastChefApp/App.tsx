@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SafeAreaView, View, Text, StyleSheet, FlatList, TextInput, TouchableHighlight } from 'react-native';
+import { SafeAreaView, View, Text, StyleSheet, FlatList, TextInput, TouchableHighlight, Image } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 import { MenuItem } from './types';
 // Define the type for a menu item
@@ -46,8 +46,11 @@ export default function MenuScreen() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.headingContainer}>
-        <Text style={styles.trackerName}>Restaurant Menu Tracker</Text>
+        <Text style={styles.trackerName}>Restaurant Menu</Text>
         <Text style={styles.menuHeader}>Menu</Text>
+        <Image style={styles.image}
+  source={{ uri: '_images/meal 1.jpg' }}/>
+
         <Text style={styles.totalItems}>Total Items: {menuItems.length}</Text>
       </View>
 
@@ -195,12 +198,20 @@ const styles = StyleSheet.create({
     backgroundColor: '#27ae60',
     padding: 15,
     borderRadius: 10,
-    alignItems: 'center',
+    alignItems: 'center'
   },
   buttonText: {
     color: '#ffffff',
     fontSize: 18,
     fontWeight: 'bold',
   },
+  // New image style added
+  image: {
+    width: '100%',       // Adjust width based on your requirement
+    height: 200,         // Adjust height based on your requirement
+    resizeMode: 'stretch', // You can choose 'contain', 'stretch', etc.
+    borderRadius: 10,    // To add rounded corners to the image
+    marginVertical: 20,  // Vertical margin for spacing
+  }, 
 });
 
