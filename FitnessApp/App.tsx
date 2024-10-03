@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
 import { FlatList, SafeAreaView, StyleSheet, Text, View, Image, TextInput, TouchableHighlight } from 'react-native';
 import { Picker } from "@react-native-picker/picker";
-import { WorkoutDetails } from 'types';
+import { WorkoutDetails } from './type';
 
 export default function App() {
   // useState hook is used to manage the state of the variables that are going to change
